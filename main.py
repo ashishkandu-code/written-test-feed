@@ -6,9 +6,9 @@ import smtplib
 import ssl
 from email.header import Header
 from email.mime.text import MIMEText
-import schedule
-from schedule import repeat, every
-import time
+# import schedule
+# from schedule import repeat, every
+# import time
 
 logging.basicConfig(level=logging.INFO,
                     format='(%(levelname)s) - %(asctime)s : %(message)s', datefmt='%b-%d %I:%M:%S %p',
@@ -116,14 +116,12 @@ def fetch_written_forms_response():
         return None
 
 
-@repeat(every(10).minutes)
+# @repeat(every(10).minutes)
 def main():
 
     response_result = fetch_written_forms_response()
     if response_result:
         latest_id, formatted_date, title, download_fileUrl = response_result
-        # content = f'{formatted_date}\n\n{title}\n\nDownload PDF:\n{download_fileUrl}'.encode(
-        #     'utf-8')
         content = f'[Notice]\n{title}\n\nPublished date: {formatted_date}\n\nDownload PDF:\n{download_fileUrl}\n\nThanks,\nAshish Bot'.encode(
             'utf-8')
 
@@ -164,6 +162,8 @@ if __name__ == '__main__':
         password: str = data.get('password')
         logging.debug("Email and password setting complete")
 
-    while True:
-        schedule.run_pending()
-        time.sleep(1)
+    # while True:
+    #     schedule.run_pending()
+    #     time.sleep(1)
+    logging.info('==== Execution finished ====')
+
