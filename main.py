@@ -11,7 +11,8 @@ from schedule import repeat, every
 import time
 
 logging.basicConfig(level=logging.INFO,
-                    format='(%(levelname)s) - %(asctime)s : %(message)s', datefmt='%b-%d %I:%M:%S %p')
+                    format='(%(levelname)s) - %(asctime)s : %(message)s', datefmt='%b-%d %I:%M:%S %p',
+                    filename='logs.log')
 
 written_forms_endpoint = 'http://103.69.127.113:8080/notice-ws/api/v1/dotm/written-forms'
 download_endpoint = 'http://103.69.127.113/uploads'
@@ -115,7 +116,7 @@ def fetch_written_forms_response():
         return None
 
 
-@repeat(every(2).minutes)
+@repeat(every(10).minutes)
 def main():
 
     response_result = fetch_written_forms_response()
