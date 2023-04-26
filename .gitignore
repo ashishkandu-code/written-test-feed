@@ -1,6 +1,7 @@
 *.json
-*.txt
 
+id.txt
+temp_imp_url.txt
 funk.py
 
 venv/
