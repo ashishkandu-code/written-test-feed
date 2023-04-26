@@ -1,22 +1,27 @@
 import requests
 import logging
 from datetime import datetime
+import json
 import smtplib
 import ssl
-import json
 from email.header import Header
 from email.mime.text import MIMEText
+import schedule
+from schedule import repeat, every
+import time
 
-logging.basicConfig(level=logging.INFO, format='(%(levelname)s) - %(asctime)s : %(message)s', datefmt='%b-%d')
+logging.basicConfig(level=logging.INFO,
+                    format='(%(levelname)s) - %(asctime)s : %(message)s', datefmt='%b-%d %I:%M:%S %p')
 
 written_forms_endpoint = 'http://103.69.127.113:8080/notice-ws/api/v1/dotm/written-forms'
 download_endpoint = 'http://103.69.127.113/uploads'
 
-DEFAULT_VALUE = 1203
+DEFAULT_VALUE = 1203 # Can be any random number (integer)
 host = 'smtp.gmail.com'
 port = 587
 
 recipients = ['ashishkandu43@gmail.com', ]
+
 
 def send_email(from_email: str, to_email: str, password: str, message: str):
     """sends email to the to_email and returns dict if error occurs"""
@@ -25,7 +30,7 @@ def send_email(from_email: str, to_email: str, password: str, message: str):
 
     # Establishing connection
     connection = smtplib.SMTP(host=host, port=port, timeout=10)
-    connection.set_debuglevel(0) # Debugging off
+    connection.set_debuglevel(0)  # Debugging off
     logging.info("Connection establsihed")
 
     connection.starttls(context=context)
@@ -36,7 +41,8 @@ def send_email(from_email: str, to_email: str, password: str, message: str):
         result = connection.login(user=from_email, password=password)
         logging.debug(result)
 
-        response = connection.sendmail(from_addr=from_email, to_addrs=to_email, msg=message)
+        response = connection.sendmail(
+            from_addr=from_email, to_addrs=to_email, msg=message)
         logging.info("Message sent")
     except Exception as e:
         logging.exception(e)
@@ -46,6 +52,7 @@ def send_email(from_email: str, to_email: str, password: str, message: str):
         connection.close()
         logging.info('Connection closed')
         return response
+
 
 def fetch_written_forms_response():
 
@@ -93,22 +100,57 @@ def fetch_written_forms_response():
         except FileNotFoundError:
             logging.info('File not found; Using default stored id')
             store_id = DEFAULT_VALUE
-        logging.info(f'Curr stored_id: {store_id}')
+        logging.info(f'Current cached id: {store_id}')
         if not latest_id == store_id:
+            logging.info(f'New entry found! id: {latest_id}')
             title = latest_data_object['title']
             fileUrl = latest_data_object['fileUrl']
             createdDate = latest_data_object['createdDate']
 
             download_fileUrl = "/".join((download_endpoint, fileUrl))
-            formatted_date = datetime.strptime(createdDate, '%Y-%m-%dT%H:%M:%S.%f').strftime('%b-%d %I:%M %p')
+            formatted_date = datetime.strptime(
+                createdDate, '%Y-%m-%dT%H:%M:%S.%f').strftime('%b/%d %I:%M %p')
 
             return latest_id, formatted_date, title, download_fileUrl
         return None
 
 
-if __name__ == '__main__':
-    logging.info('==== Program starting ====')
+@repeat(every(2).minutes)
+def main():
 
+    response_result = fetch_written_forms_response()
+    if response_result:
+        latest_id, formatted_date, title, download_fileUrl = response_result
+        # content = f'{formatted_date}\n\n{title}\n\nDownload PDF:\n{download_fileUrl}'.encode(
+        #     'utf-8')
+        content = f'[Notice]\n{title}\n\nPublished date: {formatted_date}\n\nDownload PDF:\n{download_fileUrl}\n\nThanks,\nAshish Bot'.encode(
+            'utf-8')
+
+        # msg = Message()
+        msg = MIMEText(content, _charset='utf-8')
+        msg['From'] = email
+        msg['To'] = ", ".join(recipients)
+        msg['Subject'] = Header(title, 'utf-8')
+        f"{formatted_date}"
+        msg.set_payload(content)
+
+        result = send_email(from_email=email, to_email=recipients,
+                            password=password, message=msg.as_string())
+
+        # logs in case result is not empty, for any errors
+        if result:
+            logging.error(result)
+        else:
+            with open('id.txt', 'w') as f:
+                f.write(str(latest_id))
+            logging.info('New ID write success!')
+
+    logging.info('==== Check completed ====')
+
+
+if __name__ == '__main__':
+
+    logging.info('==== Program starting ====')
     try:
         with open('credentials.json') as file:
             data: dict = json.load(file)
@@ -121,27 +163,6 @@ if __name__ == '__main__':
         password: str = data.get('password')
         logging.debug("Email and password setting complete")
 
-    response_result = fetch_written_forms_response()
-    if response_result:
-        latest_id, formatted_date, title, download_fileUrl = response_result
-        content = f'{formatted_date}\n\n{title}\n\nDownload PDF:\n{download_fileUrl}'.encode('utf-8')
-
-        # msg = Message()
-        msg = MIMEText(content, _charset='utf-8')
-        msg['From'] = email
-        # msg['To'] = ", ".join(recipients)
-        msg['Subject'] = Header(title, 'utf-8')
-        f"{formatted_date}"
-        msg.set_payload(content)
-
-        result = send_email(from_email=email, to_email=recipients, password=password, message=msg.as_string())
-
-        # logs in case result is not empty, for any errors
-        if result:
-            logging.error(result)
-        else:
-            with open('id.txt', 'w') as f:
-                f.write(str(latest_id))
-            logging.info('New ID write success!')
-
-    logging.info('==== Completed ====')
+    while True:
+        schedule.run_pending()
+        time.sleep(1)
