@@ -96,8 +96,7 @@ class Fetcher:
             createdDate, '%Y-%m-%dT%H:%M:%S.%f').strftime('%b/%d %I:%M %p')
         return title, download_fileUrl, formatted_date, endpoint_name
 
-    def first_feed(self, response: Response, endpoint_name: str):
-        responseObject_data: list = response.json()['responseObject']['data']
+    def first_feed(self, responseObject_data: list, endpoint_name: str):
         contents = []
         for data in responseObject_data[:5]:
             contents.append(self.get_title_downloadfileUrl_formatteddate(data, endpoint_name))
@@ -116,8 +115,8 @@ class Fetcher:
             return None
 
         try:
-            latest_data_object: dict = response.json()[
-                'responseObject']['data'][0]
+            responseObject_data: list = response.json()['responseObject']['data']
+            latest_data_object: dict = responseObject_data[0]
             latest_id: int = latest_data_object.get('id', None)
         except TypeError as te:
             logger.error(te)
@@ -146,18 +145,27 @@ class Fetcher:
             with open(DATA_ID_JSON_FILENAME, 'w') as json_file:
                 json.dump(data_ids, json_file)
             logger.info(f'{endpoint_name} tracking with id={latest_id}')
-            return self.first_feed(response, endpoint_name)
+            return self.first_feed(responseObject_data, endpoint_name)
 
         elif not latest_id == cached_id:
             logger.info(
                 f'New entry found for {endpoint_name} notice! id: {latest_id}')
+            
+            # Updating the endpoint cached id
             data_ids.update({endpoint_name: latest_id})
             with open(DATA_ID_JSON_FILENAME, 'w') as json_file:
                 json.dump(data_ids, json_file)
             logger.info(f'{endpoint_name} updated id={latest_id}')
-            title, download_fileUrl, formatted_date, endpoint_name = self.get_title_downloadfileUrl_formatteddate(
-                dataobject=latest_data_object, endpoint_name=endpoint_name)
 
-            return [(title, download_fileUrl, formatted_date, endpoint_name)]
+            contents = []
+            for data in responseObject_data:
+                contents.append(self.get_title_downloadfileUrl_formatteddate(data, endpoint_name))
+                if data['id'] == latest_id:
+                    break
+            return contents
+            # title, download_fileUrl, formatted_date, endpoint_name = self.get_title_downloadfileUrl_formatteddate(
+            #     dataobject=latest_data_object, endpoint_name=endpoint_name)
+
+            # return [(title, download_fileUrl, formatted_date, endpoint_name)]
         logger.info(f'No new update found for {endpoint_name} notices')
         return None
