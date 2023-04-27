@@ -151,9 +151,13 @@ class Fetcher:
         elif not latest_id == cached_id:
             logger.info(
                 f'New entry found for {endpoint_name} notice! id: {latest_id}')
-            title, download_fileUrl, formatted_date = self.get_title_downloadfileUrl_formatteddate(
-                dataobject=latest_data_object)
+            data_ids.update({endpoint_name: latest_id})
+            with open(DATA_ID_JSON_FILENAME, 'w') as json_file:
+                json.dump(data_ids, json_file)
+            logger.info(f'{endpoint_name} updated id={latest_id}')
+            title, download_fileUrl, formatted_date, endpoint_name = self.get_title_downloadfileUrl_formatteddate(
+                dataobject=latest_data_object, endpoint_name=endpoint_name)
 
-            return formatted_date, title, download_fileUrl
+            return [(title, download_fileUrl, formatted_date, endpoint_name)]
         logger.info(f'No new update found for {endpoint_name} notices')
         return None

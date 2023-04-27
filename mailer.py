@@ -6,10 +6,13 @@ import json
 
 import logging
 from mylogging import log_setup
+from myexceptions import FileEmptyException
 
-#set up logging configuration
+# set up logging configuration
 log_setup()
 logger = logging.getLogger(__name__)
+
+RECIPIENT_FILENAME = 'recipients.txt'
 
 
 class Mailer:
@@ -29,7 +32,16 @@ class Mailer:
             logger.debug("Email and password setting complete")
 
     def get_recipients(self):
-        return ['ashishkandu43@gmail.com', ]
+        try:
+            with open(RECIPIENT_FILENAME) as file:
+                recipients: list = file.readlines()
+                if not recipients:
+                    recipients = ['ashishkandu43@gmail.com']
+                    raise FileEmptyException
+        except (FileNotFoundError, FileEmptyException):
+            with open(RECIPIENT_FILENAME, 'w') as file:
+                file.write('ashishkandu43@gmail.com\n')
+        return recipients
 
     def send_email(self, title: str, content: str):
         """sends email to the to_email and returns dict if error occurs"""

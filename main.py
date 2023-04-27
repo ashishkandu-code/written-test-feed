@@ -8,30 +8,32 @@ from mylogging import log_setup
 log_setup()
 logger = logging.getLogger(__name__)
 
+endpoints_to_check = (news_events_endpoint, trial_forms_endpoint, written_forms_endpoint)
 
 def main():
     fetch = Fetcher()
 
-    response = fetch.fetch_forms(written_forms_endpoint)
-    contents = fetch.response_hanlder(response, written_forms_endpoint)
-    if contents:
-        body = ''
-        if len(contents) == 5:
-            body += '\nLatest feeds:\n'
-        for content in contents:
-            title, download_fileUrl, formatted_date, endpoint_name = content
-            body += f'\n{title} - {formatted_date}\nDownload PDF:\n{download_fileUrl}\n'
+    for endpoint_toc_check in endpoints_to_check:
+        response = fetch.fetch_forms(endpoint_toc_check)
+        contents = fetch.response_hanlder(response, endpoint_toc_check)
+        if contents:
+            body = ''
+            if len(contents) == 5:
+                body += '\nLatest feeds:\n'
+            for content in contents:
+                title, download_fileUrl, formatted_date, endpoint_name = content
+                body += f'\n{title} - {formatted_date}\nDownload PDF:\n{download_fileUrl}\n'
 
-        content = f'[{endpoint_name} notice]\n{body}\nThanks,\nAshish Bot'.encode(
-            'utf-8')
+            content = f'[{endpoint_name} notice]\n{body}\nThanks,\nAshish Bot'.encode(
+                'utf-8')
 
-        mailbot = Mailer()
+            mailbot = Mailer()
 
-        result = mailbot.send_email(title=contents[0][0], content=content)
+            result = mailbot.send_email(title=contents[0][0], content=content)
 
-        # logs in case result is not empty, for any errors
-        if result:
-            logger.error(result)
+            # logs in case result is not empty, for any errors
+            if result:
+                logger.error(result)
 
     logger.info('==== Check completed ====')
 

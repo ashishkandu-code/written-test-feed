@@ -1,7 +1,7 @@
 *.json
 
 id.txt
-temp_imp_url.txt
+recipients.txt
 funk.py
 *.log
 
