@@ -4,11 +4,13 @@ from fetcher import Fetcher
 from endpoints import news_events_endpoint, trial_forms_endpoint, written_forms_endpoint
 from mylogging import log_setup
 
-#set up logging configuration
+# set up logging configuration
 log_setup()
 logger = logging.getLogger(__name__)
 
-endpoints_to_check = (news_events_endpoint, trial_forms_endpoint, written_forms_endpoint)
+endpoints_to_check = (news_events_endpoint,
+                      trial_forms_endpoint, written_forms_endpoint)
+
 
 def main():
     fetch = Fetcher()
@@ -28,14 +30,11 @@ def main():
                 'utf-8')
 
             mailbot = Mailer()
-
             result = mailbot.send_email(title=contents[0][0], content=content)
 
             # logs in case result is not empty, for any errors
             if result:
                 logger.error(result)
-
-    logger.info('==== Check completed ====')
 
 
 if __name__ == '__main__':
@@ -44,4 +43,4 @@ if __name__ == '__main__':
 
     # Calling main function
     main()
-    logger.info('==== Execution finished ====')
+    logger.info('==== Program execution finished ====')
