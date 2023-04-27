@@ -6,9 +6,6 @@ import smtplib
 import ssl
 from email.header import Header
 from email.mime.text import MIMEText
-# import schedule
-# from schedule import repeat, every
-# import time
 
 logging.basicConfig(level=logging.INFO,
                     format='(%(levelname)s) - %(asctime)s : %(message)s', datefmt='%b-%d %I:%M:%S %p',
@@ -17,7 +14,7 @@ logging.basicConfig(level=logging.INFO,
 written_forms_endpoint = 'http://103.69.127.113:8080/notice-ws/api/v1/dotm/written-forms'
 download_endpoint = 'http://103.69.127.113/uploads'
 
-DEFAULT_VALUE = 1203 # Can be any random number (integer)
+DEFAULT_VALUE = 1203  # Can be any random number (integer)
 host = 'smtp.gmail.com'
 port = 587
 
@@ -116,7 +113,6 @@ def fetch_written_forms_response():
         return None
 
 
-# @repeat(every(10).minutes)
 def main():
 
     response_result = fetch_written_forms_response()
@@ -162,11 +158,6 @@ if __name__ == '__main__':
         password: str = data.get('password')
         logging.debug("Email and password setting complete")
 
-    # while True:
-    #     schedule.run_pending()
-    #     time.sleep(1)
-
     # Calling main function
     main()
     logging.info('==== Execution finished ====')
-
