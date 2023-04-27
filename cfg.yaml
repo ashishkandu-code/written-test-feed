@@ -1,0 +1,31 @@
+version: 1
+
+disable_existing_loggers: false
+
+formatters:
+  simple:
+    format: '(%(levelname)s) - %(asctime)s : %(message)s'
+    datefmt: '%b-%d %I:%M:%S %p'
+  error:
+    format: "%(levelname)s <PID %(process)d:%(processName)s> %(name)s.%(funcName)s(): %(message)s"
+handlers:
+  console:
+    class: logging.StreamHandler
+    level: DEBUG
+    formatter: simple
+    stream: ext://sys.stdout
+  file_handler:
+    class: logging.FileHandler
+    filename: app.log
+    formatter: error
+    level: INFO
+
+# loggers:
+#   dev:
+#     handlers: [console, file_handler]
+#   prod:
+#     handlers: [file_handler]
+
+root:
+  level: DEBUG
+  handlers: [console]

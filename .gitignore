@@ -3,5 +3,7 @@
 id.txt
 temp_imp_url.txt
 funk.py
+*.log
 
 venv/
+__pycache__/
