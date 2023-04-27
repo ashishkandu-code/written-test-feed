@@ -17,7 +17,7 @@ handlers:
   file_handler:
     class: logging.FileHandler
     filename: app.log
-    formatter: error
+    formatter: simple
     level: INFO
 
 # loggers:
@@ -28,4 +28,4 @@ handlers:
 
 root:
   level: DEBUG
-  handlers: [console]
+  handlers: [file_handler]

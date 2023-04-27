@@ -160,12 +160,8 @@ class Fetcher:
             contents = []
             for data in responseObject_data:
                 contents.append(self.get_title_downloadfileUrl_formatteddate(data, endpoint_name))
-                if data['id'] == latest_id:
+                if data['id'] == cached_id:
                     break
             return contents
-            # title, download_fileUrl, formatted_date, endpoint_name = self.get_title_downloadfileUrl_formatteddate(
-            #     dataobject=latest_data_object, endpoint_name=endpoint_name)
-
-            # return [(title, download_fileUrl, formatted_date, endpoint_name)]
         logger.info(f'No new update found for {endpoint_name} notices')
         return None
