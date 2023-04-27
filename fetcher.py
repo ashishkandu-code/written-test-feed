@@ -99,9 +99,12 @@ class Fetcher:
     def first_feed(self, response: Response, endpoint_name: str):
         responseObject_data: list = response.json()['responseObject']['data']
         contents = []
-        for data in responseObject_data[:3]:
+        for data in responseObject_data[:5]:
             contents.append(self.get_title_downloadfileUrl_formatteddate(data, endpoint_name))
         return contents
+
+    def update_id(self, endpoint_name: str):
+        raise NotImplementedError
 
     def response_hanlder(self, response: Response, endpoint: str):
 
@@ -127,18 +130,22 @@ class Fetcher:
             with open(DATA_ID_JSON_FILENAME, 'r') as json_file:
                 data_ids: dict = json.load(json_file)
 
-        except FileNotFoundError:
+        except (FileNotFoundError, json.decoder.JSONDecodeError):
             logger.info(f'File {DATA_ID_JSON_FILENAME} not found!')
             temp_data = {
                 endpoint_name: latest_id
             }
             with open(DATA_ID_JSON_FILENAME, 'w') as json_file:
                 json.dump(temp_data, json_file)
-            logger.info('{DATA_ID_JSON_FILENAME} created and with id={latest_id}')
+            logger.info(f'{DATA_ID_JSON_FILENAME} created and with id={latest_id}')
             data_ids = {}
 
         cached_id = data_ids.get(endpoint_name, None)
         if not cached_id:
+            data_ids.update({endpoint_name: latest_id})
+            with open(DATA_ID_JSON_FILENAME, 'w') as json_file:
+                json.dump(data_ids, json_file)
+            logger.info(f'{endpoint_name} tracking with id={latest_id}')
             return self.first_feed(response, endpoint_name)
 
         elif not latest_id == cached_id:
@@ -148,4 +155,5 @@ class Fetcher:
                 dataobject=latest_data_object)
 
             return formatted_date, title, download_fileUrl
+        logger.info(f'No new update found for {endpoint_name} notices')
         return None
