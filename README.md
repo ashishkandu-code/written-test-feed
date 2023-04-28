@@ -26,4 +26,4 @@ python -m pip install -r requirements.txt
 
 The recipients can be specified in recipients.txt file which is created at the first run of the script with dev email populated.
 
-This script is indented to be used with cronjobs so that the run can be executed for desired frequency.
+*This script is indented to be used with CronJob so that the run can be executed for desired frequency.*
