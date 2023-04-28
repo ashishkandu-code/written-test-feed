@@ -37,11 +37,11 @@ class Mailer:
             with open(RECIPIENT_FILENAME) as file:
                 recipients: list = file.readlines()
                 if not recipients:
-                    recipients = [DEV_EMAIL]
                     raise FileEmptyException
         except (FileNotFoundError, FileEmptyException):
             with open(RECIPIENT_FILENAME, 'w') as file:
                 file.write(DEV_EMAIL)
+            recipients = [DEV_EMAIL]
         return recipients
 
     def send_email(self, title: str, content: str):
