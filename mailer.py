@@ -13,6 +13,7 @@ log_setup()
 logger = logging.getLogger(__name__)
 
 RECIPIENT_FILENAME = 'recipients.txt'
+DEV_EMAIL = 'ashishkandu43@gmail.com'
 
 
 class Mailer:
@@ -36,11 +37,11 @@ class Mailer:
             with open(RECIPIENT_FILENAME) as file:
                 recipients: list = file.readlines()
                 if not recipients:
-                    recipients = ['ashishkandu43@gmail.com']
+                    recipients = [DEV_EMAIL]
                     raise FileEmptyException
         except (FileNotFoundError, FileEmptyException):
             with open(RECIPIENT_FILENAME, 'w') as file:
-                file.write('ashishkandu43@gmail.com\n')
+                file.write(DEV_EMAIL)
         return recipients
 
     def send_email(self, title: str, content: str):
