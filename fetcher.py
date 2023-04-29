@@ -74,12 +74,12 @@ class Fetcher:
                 logger.error(exception)
                 code = exception.response.status_code
                 if code in retry_codes:
-                    logger.info('retrying in {retry_in} seconds...')
+                    logger.info(f'retrying in {retry_in} seconds...')
                     time.sleep(retry_in)
                     continue
             except ConnectionError as connection_error:
                 logger.error(connection_error)
-                logger.info('retrying in {retry_in} seconds...')
+                logger.info(f'retrying in {retry_in} seconds...')
                 time.sleep(retry_in)
                 continue
             except Exception as gemeral_exception:
