@@ -15,7 +15,7 @@ from mylogging import log_setup
 log_setup()
 logger = logging.getLogger(__name__)
 
-retry_in: int = 10  # seconds
+retry_in: int = 10  # second
 retries: int = 3
 retry_codes: List = [
     HTTPStatus.BAD_GATEWAY,
