@@ -35,7 +35,7 @@ class Mailer:
     def get_recipients(self):
         try:
             with open(RECIPIENT_FILENAME) as file:
-                recipients: list = file.readlines()
+                recipients: list = [recipient.strip('\n') for recipient in file.readlines()]
                 if not recipients:
                     raise FileEmptyException
         except (FileNotFoundError, FileEmptyException):
