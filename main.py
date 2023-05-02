@@ -15,9 +15,9 @@ endpoints_to_check = (news_events_endpoint,
 def main():
     fetch = Fetcher()
 
-    for endpoint_toc_check in endpoints_to_check:
-        response = fetch.fetch_forms(endpoint_toc_check)
-        contents = fetch.response_hanlder(response, endpoint_toc_check)
+    for endpoint_to_check in endpoints_to_check:
+        response = fetch.fetch_forms(endpoint_to_check)
+        contents = fetch.response_hanlder(response, endpoint_to_check)
         if contents:
             body = ''
             if len(contents) == 5:
