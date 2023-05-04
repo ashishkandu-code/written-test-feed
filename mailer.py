@@ -1,6 +1,7 @@
 import smtplib
 import ssl
 from email.header import Header
+from email.utils import formataddr
 from email.mime.text import MIMEText
 import json
 
@@ -14,6 +15,7 @@ logger = logging.getLogger(__name__)
 
 RECIPIENT_FILENAME = 'recipients.txt'
 DEV_EMAIL = 'ashishkandu43@gmail.com'
+SENDER_NAME = 'Ashish Bot'
 
 
 class Mailer:
@@ -48,7 +50,7 @@ class Mailer:
         """sends email to the to_email and returns dict if error occurs"""
         context = ssl.create_default_context()
         msg = MIMEText(content, _charset='utf-8')
-        msg['From'] = self.email
+        msg['From'] = formataddr((str(Header(SENDER_NAME, 'utf-8')), self.email))
         msg['To'] = ", ".join(self.recipients)
         msg['Subject'] = Header(title, 'utf-8')
         msg.set_payload(content)
