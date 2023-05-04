@@ -159,9 +159,9 @@ class Fetcher:
 
             contents = []
             for data in responseObject_data:
-                contents.append(self.get_title_downloadfileUrl_formatteddate(data, endpoint_name))
                 if data['id'] == cached_id:
                     break
+                contents.append(self.get_title_downloadfileUrl_formatteddate(data, endpoint_name))
             return contents
         logger.info(f'No new update found for {endpoint_name} notices')
         return None
