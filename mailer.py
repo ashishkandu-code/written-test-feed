@@ -1,17 +1,24 @@
 import smtplib
 import ssl
 from email.header import Header
-from email.utils import formataddr
+from email.utils import formataddr, formatdate, COMMASPACE
 from email.mime.text import MIMEText
-import json
+import os
 
 import logging
 from mylogging import log_setup
-from myexceptions import FileEmptyException
 
 # set up logging configuration
 log_setup()
 logger = logging.getLogger(__name__)
+
+try:
+    from dotenv import load_dotenv
+except ImportError as ie:
+    logger.warning(ie)
+    print("could not load dotenv")
+else:
+    load_dotenv()
 
 RECIPIENT_FILENAME = 'recipients.txt'
 DEV_EMAIL = 'ashishkandu43@gmail.com'
@@ -23,27 +30,20 @@ class Mailer:
         self.host = 'smtp.gmail.com'
         self.port = 587
         self.recipients = self.get_recipients()
-        try:
-            with open('credentials.json') as file:
-                data: dict = json.load(file)
-        except FileNotFoundError:
-            open('credentials.json', 'w').close()
-            raise SystemExit("Save your credentials on credentials.json file")
-        else:
-            self.email: str = data.get('email')
-            self.password: str = data.get('password')
-            logger.debug("Email and password setting complete")
+        self.email: str = os.getenv('SENDER_EMAIL')
+        self.password: str = os.getenv('PASSWORD')
+        logger.debug("Email and password setting complete")
 
     def get_recipients(self):
+        """
+        Returns a list of recipients found in the environment it returns self.email 
+        if could not find the key.
+        """
         try:
-            with open(RECIPIENT_FILENAME) as file:
-                recipients: list = [recipient.strip('\n') for recipient in file.readlines()]
-                if not recipients:
-                    raise FileEmptyException
-        except (FileNotFoundError, FileEmptyException):
-            with open(RECIPIENT_FILENAME, 'w') as file:
-                file.write(DEV_EMAIL)
-            recipients = [DEV_EMAIL]
+            recipients:list[str] = os.environ['RECIPIENTS'].split(',')
+        except KeyError as key_error:
+            logger.error(f'recipients not found in env! {key_error}')
+            recipients = [self.email, ]
         return recipients
 
     def send_email(self, title: str, content: str):
@@ -51,7 +51,8 @@ class Mailer:
         context = ssl.create_default_context()
         msg = MIMEText(content, _charset='utf-8')
         msg['From'] = formataddr((str(Header(SENDER_NAME, 'utf-8')), self.email))
-        msg['To'] = ", ".join(self.recipients)
+        msg['Date'] = formatdate(localtime=True)
+        msg['To'] = COMMASPACE.join(self.recipients)
         msg['Subject'] = Header(title, 'utf-8')
         msg.set_payload(content)
 
