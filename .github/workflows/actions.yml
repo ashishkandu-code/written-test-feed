@@ -17,11 +17,11 @@ jobs:
         with:
           python-version: '3.10'
           cache: 'pip'
-        
+
       - name: install python packages
         run: pip install -r requirements.txt
 
-      -name: execute py script
+      - name: execute py script
         env:
           SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}
           RECIPIENTS: ${{ secrets.RECIPIENTS }}
@@ -30,7 +30,6 @@ jobs:
 
       - name: commit files
         run: |
-          git commit --local user.email
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add -A
