@@ -33,3 +33,29 @@ Jun-19 06:56:45 AM (INFO): No new update found for Trial exam notices
 Jun-19 06:56:45 AM (INFO): Fetching Written exam ..attempt 1
 Jun-19 06:56:46 AM (INFO): No new update found for Written exam notices
 Jun-19 06:56:46 AM (INFO): ==== Program execution finished ====
+Jun-19 11:20:15 AM (WARNING): No module named 'dotenv'
+Jun-19 11:20:15 AM (INFO): ==== Program starting ====
+Jun-19 11:20:15 AM (INFO): Fetching General news ..attempt 1
+Jun-19 11:20:15 AM (INFO): File data_id.json not found!
+Jun-19 11:20:15 AM (INFO): data_id.json created and with id=1250
+Jun-19 11:20:15 AM (INFO): General news tracking with id=1250
+Jun-19 11:20:15 AM (INFO): Initiating mail connection...
+Jun-19 11:20:16 AM (INFO): SMTP connection establsihed
+Jun-19 11:20:16 AM (INFO): SMTP connection secured
+Jun-19 11:20:17 AM (INFO): Mail sent
+Jun-19 11:20:17 AM (INFO): SMTP connection closed
+Jun-19 11:20:17 AM (INFO): Fetching Trial exam ..attempt 1
+Jun-19 11:20:18 AM (INFO): Trial exam tracking with id=1245
+Jun-19 11:20:18 AM (INFO): Initiating mail connection...
+Jun-19 11:20:18 AM (INFO): SMTP connection establsihed
+Jun-19 11:20:18 AM (INFO): SMTP connection secured
+Jun-19 11:20:19 AM (INFO): Mail sent
+Jun-19 11:20:19 AM (INFO): SMTP connection closed
+Jun-19 11:20:19 AM (INFO): Fetching Written exam ..attempt 1
+Jun-19 11:20:19 AM (INFO): Written exam tracking with id=1248
+Jun-19 11:20:19 AM (INFO): Initiating mail connection...
+Jun-19 11:20:20 AM (INFO): SMTP connection establsihed
+Jun-19 11:20:20 AM (INFO): SMTP connection secured
+Jun-19 11:20:20 AM (INFO): Mail sent
+Jun-19 11:20:20 AM (INFO): SMTP connection closed
+Jun-19 11:20:20 AM (INFO): ==== Program execution finished ====
