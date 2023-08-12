@@ -686,3 +686,12 @@ Aug-11 11:19:21 AM (INFO): SMTP connection closed
 Aug-11 11:19:21 AM (INFO): Fetching Written exam ..attempt 1
 Aug-11 11:19:21 AM (INFO): No new update found for Written exam notices
 Aug-11 11:19:21 AM (INFO): ==== Program execution finished ====
+Aug-12 11:19:29 AM (WARNING): No module named 'dotenv'
+Aug-12 11:19:29 AM (INFO): ==== Program starting ====
+Aug-12 11:19:29 AM (INFO): Fetching General news ..attempt 1
+Aug-12 11:19:30 AM (INFO): No new update found for General news notices
+Aug-12 11:19:30 AM (INFO): Fetching Trial exam ..attempt 1
+Aug-12 11:19:30 AM (INFO): No new update found for Trial exam notices
+Aug-12 11:19:30 AM (INFO): Fetching Written exam ..attempt 1
+Aug-12 11:19:31 AM (INFO): No new update found for Written exam notices
+Aug-12 11:19:31 AM (INFO): ==== Program execution finished ====
