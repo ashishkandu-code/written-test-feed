@@ -926,3 +926,12 @@ Aug-31 11:19:27 AM (INFO): No new update found for Trial exam notices
 Aug-31 11:19:27 AM (INFO): Fetching Written exam ..attempt 1
 Aug-31 11:19:27 AM (INFO): No new update found for Written exam notices
 Aug-31 11:19:27 AM (INFO): ==== Program execution finished ====
+Sep-01 11:19:16 AM (WARNING): No module named 'dotenv'
+Sep-01 11:19:16 AM (INFO): ==== Program starting ====
+Sep-01 11:19:16 AM (INFO): Fetching General news ..attempt 1
+Sep-01 11:19:17 AM (INFO): No new update found for General news notices
+Sep-01 11:19:17 AM (INFO): Fetching Trial exam ..attempt 1
+Sep-01 11:19:17 AM (INFO): No new update found for Trial exam notices
+Sep-01 11:19:17 AM (INFO): Fetching Written exam ..attempt 1
+Sep-01 11:19:18 AM (INFO): No new update found for Written exam notices
+Sep-01 11:19:18 AM (INFO): ==== Program execution finished ====
