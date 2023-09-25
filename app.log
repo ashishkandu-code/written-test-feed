@@ -1214,3 +1214,12 @@ Sep-24 11:19:25 AM (INFO): SMTP connection secured
 Sep-24 11:19:26 AM (INFO): Mail sent
 Sep-24 11:19:26 AM (INFO): SMTP connection closed
 Sep-24 11:19:26 AM (INFO): ==== Program execution finished ====
+Sep-25 11:19:32 AM (WARNING): No module named 'dotenv'
+Sep-25 11:19:32 AM (INFO): ==== Program starting ====
+Sep-25 11:19:32 AM (INFO): Fetching General news ..attempt 1
+Sep-25 11:19:32 AM (INFO): No new update found for General news notices
+Sep-25 11:19:32 AM (INFO): Fetching Trial exam ..attempt 1
+Sep-25 11:19:33 AM (INFO): No new update found for Trial exam notices
+Sep-25 11:19:33 AM (INFO): Fetching Written exam ..attempt 1
+Sep-25 11:19:34 AM (INFO): No new update found for Written exam notices
+Sep-25 11:19:34 AM (INFO): ==== Program execution finished ====
