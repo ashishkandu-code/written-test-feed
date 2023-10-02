@@ -1307,3 +1307,12 @@ Oct-01 11:19:28 AM (INFO): SMTP connection secured
 Oct-01 11:19:28 AM (INFO): Mail sent
 Oct-01 11:19:28 AM (INFO): SMTP connection closed
 Oct-01 11:19:28 AM (INFO): ==== Program execution finished ====
+Oct-02 11:19:13 AM (WARNING): No module named 'dotenv'
+Oct-02 11:19:13 AM (INFO): ==== Program starting ====
+Oct-02 11:19:13 AM (INFO): Fetching General news ..attempt 1
+Oct-02 11:19:14 AM (INFO): No new update found for General news notices
+Oct-02 11:19:14 AM (INFO): Fetching Trial exam ..attempt 1
+Oct-02 11:19:14 AM (INFO): No new update found for Trial exam notices
+Oct-02 11:19:14 AM (INFO): Fetching Written exam ..attempt 1
+Oct-02 11:19:15 AM (INFO): No new update found for Written exam notices
+Oct-02 11:19:15 AM (INFO): ==== Program execution finished ====
