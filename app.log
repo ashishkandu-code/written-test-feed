@@ -1340,3 +1340,24 @@ Oct-04 11:19:46 AM (INFO): SMTP connection secured
 Oct-04 11:19:46 AM (INFO): Mail sent
 Oct-04 11:19:46 AM (INFO): SMTP connection closed
 Oct-04 11:19:46 AM (INFO): ==== Program execution finished ====
+Oct-05 11:19:53 AM (WARNING): No module named 'dotenv'
+Oct-05 11:19:53 AM (INFO): ==== Program starting ====
+Oct-05 11:19:53 AM (INFO): Fetching General news ..attempt 1
+Oct-05 11:19:53 AM (INFO): No new update found for General news notices
+Oct-05 11:19:53 AM (INFO): Fetching Trial exam ..attempt 1
+Oct-05 11:19:54 AM (INFO): New entry found for Trial exam notice! id: 1338
+Oct-05 11:19:54 AM (INFO): Trial exam updated id=1338
+Oct-05 11:19:54 AM (INFO): Initiating mail connection...
+Oct-05 11:19:54 AM (INFO): SMTP connection establsihed
+Oct-05 11:19:54 AM (INFO): SMTP connection secured
+Oct-05 11:19:55 AM (INFO): Mail sent
+Oct-05 11:19:55 AM (INFO): SMTP connection closed
+Oct-05 11:19:55 AM (INFO): Fetching Written exam ..attempt 1
+Oct-05 11:19:56 AM (INFO): New entry found for Written exam notice! id: 1339
+Oct-05 11:19:56 AM (INFO): Written exam updated id=1339
+Oct-05 11:19:56 AM (INFO): Initiating mail connection...
+Oct-05 11:19:56 AM (INFO): SMTP connection establsihed
+Oct-05 11:19:56 AM (INFO): SMTP connection secured
+Oct-05 11:19:56 AM (INFO): Mail sent
+Oct-05 11:19:56 AM (INFO): SMTP connection closed
+Oct-05 11:19:56 AM (INFO): ==== Program execution finished ====
