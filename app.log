@@ -1721,3 +1721,12 @@ Nov-06 11:20:35 AM (INFO): SMTP connection secured
 Nov-06 11:20:36 AM (INFO): Mail sent
 Nov-06 11:20:36 AM (INFO): SMTP connection closed
 Nov-06 11:20:36 AM (INFO): ==== Program execution finished ====
+Nov-07 11:19:45 AM (WARNING): No module named 'dotenv'
+Nov-07 11:19:45 AM (INFO): ==== Program starting ====
+Nov-07 11:19:45 AM (INFO): Fetching General news ..attempt 1
+Nov-07 11:19:45 AM (INFO): No new update found for General news notices
+Nov-07 11:19:45 AM (INFO): Fetching Trial exam ..attempt 1
+Nov-07 11:19:46 AM (INFO): No new update found for Trial exam notices
+Nov-07 11:19:46 AM (INFO): Fetching Written exam ..attempt 1
+Nov-07 11:19:46 AM (INFO): No new update found for Written exam notices
+Nov-07 11:19:46 AM (INFO): ==== Program execution finished ====
