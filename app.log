@@ -1793,3 +1793,12 @@ Nov-12 11:19:17 AM (INFO): No new update found for Trial exam notices
 Nov-12 11:19:17 AM (INFO): Fetching Written exam ..attempt 1
 Nov-12 11:19:18 AM (INFO): No new update found for Written exam notices
 Nov-12 11:19:18 AM (INFO): ==== Program execution finished ====
+Nov-13 11:20:03 AM (WARNING): No module named 'dotenv'
+Nov-13 11:20:03 AM (INFO): ==== Program starting ====
+Nov-13 11:20:03 AM (INFO): Fetching General news ..attempt 1
+Nov-13 11:20:03 AM (INFO): No new update found for General news notices
+Nov-13 11:20:03 AM (INFO): Fetching Trial exam ..attempt 1
+Nov-13 11:20:04 AM (INFO): No new update found for Trial exam notices
+Nov-13 11:20:04 AM (INFO): Fetching Written exam ..attempt 1
+Nov-13 11:20:04 AM (INFO): No new update found for Written exam notices
+Nov-13 11:20:04 AM (INFO): ==== Program execution finished ====
