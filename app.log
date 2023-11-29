@@ -1961,3 +1961,18 @@ Nov-28 11:20:27 AM (INFO): No new update found for Trial exam notices
 Nov-28 11:20:27 AM (INFO): Fetching Written exam ..attempt 1
 Nov-28 11:20:27 AM (INFO): No new update found for Written exam notices
 Nov-28 11:20:27 AM (INFO): ==== Program execution finished ====
+Nov-29 11:20:19 AM (WARNING): No module named 'dotenv'
+Nov-29 11:20:19 AM (INFO): ==== Program starting ====
+Nov-29 11:20:19 AM (INFO): Fetching General news ..attempt 1
+Nov-29 11:20:20 AM (INFO): No new update found for General news notices
+Nov-29 11:20:20 AM (INFO): Fetching Trial exam ..attempt 1
+Nov-29 11:20:20 AM (INFO): No new update found for Trial exam notices
+Nov-29 11:20:20 AM (INFO): Fetching Written exam ..attempt 1
+Nov-29 11:20:21 AM (INFO): New entry found for Written exam notice! id: 1368
+Nov-29 11:20:21 AM (INFO): Written exam updated id=1368
+Nov-29 11:20:21 AM (INFO): Initiating mail connection...
+Nov-29 11:20:21 AM (INFO): SMTP connection establsihed
+Nov-29 11:20:21 AM (INFO): SMTP connection secured
+Nov-29 11:20:22 AM (INFO): Mail sent
+Nov-29 11:20:22 AM (INFO): SMTP connection closed
+Nov-29 11:20:22 AM (INFO): ==== Program execution finished ====
