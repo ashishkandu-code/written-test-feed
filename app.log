@@ -1976,3 +1976,12 @@ Nov-29 11:20:21 AM (INFO): SMTP connection secured
 Nov-29 11:20:22 AM (INFO): Mail sent
 Nov-29 11:20:22 AM (INFO): SMTP connection closed
 Nov-29 11:20:22 AM (INFO): ==== Program execution finished ====
+Nov-30 11:20:26 AM (WARNING): No module named 'dotenv'
+Nov-30 11:20:26 AM (INFO): ==== Program starting ====
+Nov-30 11:20:26 AM (INFO): Fetching General news ..attempt 1
+Nov-30 11:20:27 AM (INFO): No new update found for General news notices
+Nov-30 11:20:27 AM (INFO): Fetching Trial exam ..attempt 1
+Nov-30 11:20:28 AM (INFO): No new update found for Trial exam notices
+Nov-30 11:20:28 AM (INFO): Fetching Written exam ..attempt 1
+Nov-30 11:20:28 AM (INFO): No new update found for Written exam notices
+Nov-30 11:20:28 AM (INFO): ==== Program execution finished ====
