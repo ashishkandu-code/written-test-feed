@@ -2099,3 +2099,12 @@ Dec-10 11:19:14 AM (INFO): SMTP connection secured
 Dec-10 11:19:15 AM (INFO): Mail sent
 Dec-10 11:19:15 AM (INFO): SMTP connection closed
 Dec-10 11:19:15 AM (INFO): ==== Program execution finished ====
+Dec-11 11:21:54 AM (WARNING): No module named 'dotenv'
+Dec-11 11:21:54 AM (INFO): ==== Program starting ====
+Dec-11 11:21:54 AM (INFO): Fetching General news ..attempt 1
+Dec-11 11:21:54 AM (INFO): No new update found for General news notices
+Dec-11 11:21:54 AM (INFO): Fetching Trial exam ..attempt 1
+Dec-11 11:21:55 AM (INFO): No new update found for Trial exam notices
+Dec-11 11:21:55 AM (INFO): Fetching Written exam ..attempt 1
+Dec-11 11:21:56 AM (INFO): No new update found for Written exam notices
+Dec-11 11:21:56 AM (INFO): ==== Program execution finished ====
