@@ -2522,3 +2522,12 @@ Jan-14 11:19:55 AM (INFO): SMTP connection secured
 Jan-14 11:19:56 AM (INFO): Mail sent
 Jan-14 11:19:56 AM (INFO): SMTP connection closed
 Jan-14 11:19:56 AM (INFO): ==== Program execution finished ====
+Jan-15 11:21:12 AM (WARNING): No module named 'dotenv'
+Jan-15 11:21:13 AM (INFO): ==== Program starting ====
+Jan-15 11:21:13 AM (INFO): Fetching General news ..attempt 1
+Jan-15 11:21:13 AM (INFO): No new update found for General news notices
+Jan-15 11:21:13 AM (INFO): Fetching Trial exam ..attempt 1
+Jan-15 11:21:15 AM (INFO): No new update found for Trial exam notices
+Jan-15 11:21:15 AM (INFO): Fetching Written exam ..attempt 1
+Jan-15 11:21:16 AM (INFO): No new update found for Written exam notices
+Jan-15 11:21:16 AM (INFO): ==== Program execution finished ====
