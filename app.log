@@ -2564,3 +2564,12 @@ Jan-18 11:21:07 AM (INFO): SMTP connection closed
 Jan-18 11:21:07 AM (INFO): Fetching Written exam ..attempt 1
 Jan-18 11:21:07 AM (INFO): No new update found for Written exam notices
 Jan-18 11:21:07 AM (INFO): ==== Program execution finished ====
+Jan-19 11:21:26 AM (WARNING): No module named 'dotenv'
+Jan-19 11:21:26 AM (INFO): ==== Program starting ====
+Jan-19 11:21:26 AM (INFO): Fetching General news ..attempt 1
+Jan-19 11:21:26 AM (INFO): No new update found for General news notices
+Jan-19 11:21:26 AM (INFO): Fetching Trial exam ..attempt 1
+Jan-19 11:21:28 AM (INFO): No new update found for Trial exam notices
+Jan-19 11:21:28 AM (INFO): Fetching Written exam ..attempt 1
+Jan-19 11:21:28 AM (INFO): No new update found for Written exam notices
+Jan-19 11:21:28 AM (INFO): ==== Program execution finished ====
