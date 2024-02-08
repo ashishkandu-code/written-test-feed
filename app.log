@@ -2816,3 +2816,28 @@ Feb-07 11:21:50 AM (INFO): No new update found for Trial exam notices
 Feb-07 11:21:50 AM (INFO): Fetching Written exam ..attempt 1
 Feb-07 11:21:52 AM (INFO): No new update found for Written exam notices
 Feb-07 11:21:52 AM (INFO): ==== Program execution finished ====
+Feb-08 11:19:13 AM (WARNING): No module named 'dotenv'
+Feb-08 11:19:13 AM (INFO): ==== Program starting ====
+Feb-08 11:19:13 AM (INFO): Fetching General news ..attempt 1
+Feb-08 11:19:13 AM (ERROR): HTTPConnectionPool(host='103.69.127.113', port=8080): Max retries exceeded with url: /notice-ws/api/v1/dotm/news-events?pageNo=0&pageSize=10 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7c162cd330>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Feb-08 11:19:13 AM (INFO): retrying in 10 seconds...
+Feb-08 11:19:23 AM (INFO): Fetching General news ..attempt 2
+Feb-08 11:35:00 AM (ERROR): HTTPConnectionPool(host='103.69.127.113', port=8080): Read timed out. (read timeout=None)
+Feb-08 11:35:00 AM (INFO): Unable to get response from General news endpoint!
+Feb-08 11:35:00 AM (INFO): Fetching Trial exam ..attempt 1
+Feb-08 11:35:00 AM (ERROR): HTTPConnectionPool(host='103.69.127.113', port=8080): Max retries exceeded with url: /notice-ws/api/v1/dotm/forms?pageNo=0&pageSize=10 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7c162ce200>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Feb-08 11:35:00 AM (INFO): retrying in 10 seconds...
+Feb-08 11:35:10 AM (INFO): Fetching Trial exam ..attempt 2
+Feb-08 11:35:10 AM (ERROR): ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+Feb-08 11:35:10 AM (INFO): retrying in 10 seconds...
+Feb-08 11:35:21 AM (INFO): Fetching Trial exam ..attempt 3
+Feb-08 11:35:22 AM (INFO): No new update found for Trial exam notices
+Feb-08 11:35:22 AM (INFO): Fetching Written exam ..attempt 1
+Feb-08 11:35:23 AM (INFO): New entry found for Written exam notice! id: 1432
+Feb-08 11:35:23 AM (INFO): Written exam updated id=1432
+Feb-08 11:35:23 AM (INFO): Initiating mail connection...
+Feb-08 11:35:23 AM (INFO): SMTP connection establsihed
+Feb-08 11:35:23 AM (INFO): SMTP connection secured
+Feb-08 11:35:24 AM (INFO): Mail sent
+Feb-08 11:35:24 AM (INFO): SMTP connection closed
+Feb-08 11:35:24 AM (INFO): ==== Program execution finished ====
