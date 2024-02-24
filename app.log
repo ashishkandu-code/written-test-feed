@@ -3033,3 +3033,12 @@ Feb-23 11:19:42 AM (INFO): SMTP connection closed
 Feb-23 11:19:42 AM (INFO): Fetching Written exam ..attempt 1
 Feb-23 11:19:43 AM (INFO): No new update found for Written exam notices
 Feb-23 11:19:43 AM (INFO): ==== Program execution finished ====
+Feb-24 11:19:16 AM (WARNING): No module named 'dotenv'
+Feb-24 11:19:16 AM (INFO): ==== Program starting ====
+Feb-24 11:19:16 AM (INFO): Fetching General news ..attempt 1
+Feb-24 11:19:18 AM (INFO): No new update found for General news notices
+Feb-24 11:19:18 AM (INFO): Fetching Trial exam ..attempt 1
+Feb-24 11:19:19 AM (INFO): No new update found for Trial exam notices
+Feb-24 11:19:19 AM (INFO): Fetching Written exam ..attempt 1
+Feb-24 11:19:19 AM (INFO): No new update found for Written exam notices
+Feb-24 11:19:19 AM (INFO): ==== Program execution finished ====
