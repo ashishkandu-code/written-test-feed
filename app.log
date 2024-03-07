@@ -3171,3 +3171,18 @@ Mar-06 11:19:30 AM (INFO): SMTP connection secured
 Mar-06 11:19:30 AM (INFO): Mail sent
 Mar-06 11:19:30 AM (INFO): SMTP connection closed
 Mar-06 11:19:30 AM (INFO): ==== Program execution finished ====
+Mar-07 11:19:16 AM (WARNING): No module named 'dotenv'
+Mar-07 11:19:16 AM (INFO): ==== Program starting ====
+Mar-07 11:19:16 AM (INFO): Fetching General news ..attempt 1
+Mar-07 11:19:17 AM (INFO): No new update found for General news notices
+Mar-07 11:19:17 AM (INFO): Fetching Trial exam ..attempt 1
+Mar-07 11:19:17 AM (INFO): No new update found for Trial exam notices
+Mar-07 11:19:17 AM (INFO): Fetching Written exam ..attempt 1
+Mar-07 11:19:18 AM (INFO): New entry found for Written exam notice! id: 1456
+Mar-07 11:19:18 AM (INFO): Written exam updated id=1456
+Mar-07 11:19:18 AM (INFO): Initiating mail connection...
+Mar-07 11:19:18 AM (INFO): SMTP connection establsihed
+Mar-07 11:19:18 AM (INFO): SMTP connection secured
+Mar-07 11:19:19 AM (INFO): Mail sent
+Mar-07 11:19:19 AM (INFO): SMTP connection closed
+Mar-07 11:19:19 AM (INFO): ==== Program execution finished ====
