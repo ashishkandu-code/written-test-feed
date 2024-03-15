@@ -3261,3 +3261,12 @@ Mar-14 11:20:44 AM (INFO): SMTP connection closed
 Mar-14 11:20:44 AM (INFO): Fetching Written exam ..attempt 1
 Mar-14 11:20:47 AM (INFO): No new update found for Written exam notices
 Mar-14 11:20:47 AM (INFO): ==== Program execution finished ====
+Mar-15 11:19:18 AM (WARNING): No module named 'dotenv'
+Mar-15 11:19:18 AM (INFO): ==== Program starting ====
+Mar-15 11:19:18 AM (INFO): Fetching General news ..attempt 1
+Mar-15 11:19:21 AM (INFO): No new update found for General news notices
+Mar-15 11:19:21 AM (INFO): Fetching Trial exam ..attempt 1
+Mar-15 11:19:21 AM (INFO): No new update found for Trial exam notices
+Mar-15 11:19:21 AM (INFO): Fetching Written exam ..attempt 1
+Mar-15 11:19:22 AM (INFO): No new update found for Written exam notices
+Mar-15 11:19:22 AM (INFO): ==== Program execution finished ====
