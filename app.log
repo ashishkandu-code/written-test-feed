@@ -3315,3 +3315,18 @@ Mar-20 11:19:30 AM (INFO): No new update found for Trial exam notices
 Mar-20 11:19:30 AM (INFO): Fetching Written exam ..attempt 1
 Mar-20 11:19:31 AM (INFO): No new update found for Written exam notices
 Mar-20 11:19:31 AM (INFO): ==== Program execution finished ====
+Mar-21 11:19:49 AM (WARNING): No module named 'dotenv'
+Mar-21 11:19:49 AM (INFO): ==== Program starting ====
+Mar-21 11:19:49 AM (INFO): Fetching General news ..attempt 1
+Mar-21 11:19:50 AM (INFO): New entry found for General news notice! id: 1464
+Mar-21 11:19:50 AM (INFO): General news updated id=1464
+Mar-21 11:19:50 AM (INFO): Initiating mail connection...
+Mar-21 11:19:50 AM (INFO): SMTP connection establsihed
+Mar-21 11:19:50 AM (INFO): SMTP connection secured
+Mar-21 11:19:51 AM (INFO): Mail sent
+Mar-21 11:19:51 AM (INFO): SMTP connection closed
+Mar-21 11:19:51 AM (INFO): Fetching Trial exam ..attempt 1
+Mar-21 11:19:51 AM (INFO): No new update found for Trial exam notices
+Mar-21 11:19:51 AM (INFO): Fetching Written exam ..attempt 1
+Mar-21 11:19:52 AM (INFO): No new update found for Written exam notices
+Mar-21 11:19:52 AM (INFO): ==== Program execution finished ====
