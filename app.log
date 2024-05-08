@@ -3945,3 +3945,24 @@ May-07 11:22:05 AM (INFO): No new update found for Trial exam notices
 May-07 11:22:05 AM (INFO): Fetching Written exam ..attempt 1
 May-07 11:22:07 AM (INFO): No new update found for Written exam notices
 May-07 11:22:07 AM (INFO): ==== Program execution finished ====
+May-08 11:22:04 AM (WARNING): No module named 'dotenv'
+May-08 11:22:04 AM (INFO): ==== Program starting ====
+May-08 11:22:04 AM (INFO): Fetching General news ..attempt 1
+May-08 11:22:04 AM (INFO): No new update found for General news notices
+May-08 11:22:04 AM (INFO): Fetching Trial exam ..attempt 1
+May-08 11:22:05 AM (INFO): New entry found for Trial exam notice! id: 1524
+May-08 11:22:05 AM (INFO): Trial exam updated id=1524
+May-08 11:22:05 AM (INFO): Initiating mail connection...
+May-08 11:22:05 AM (INFO): SMTP connection establsihed
+May-08 11:22:05 AM (INFO): SMTP connection secured
+May-08 11:22:07 AM (INFO): Mail sent
+May-08 11:22:07 AM (INFO): SMTP connection closed
+May-08 11:22:07 AM (INFO): Fetching Written exam ..attempt 1
+May-08 11:22:07 AM (INFO): New entry found for Written exam notice! id: 1525
+May-08 11:22:07 AM (INFO): Written exam updated id=1525
+May-08 11:22:07 AM (INFO): Initiating mail connection...
+May-08 11:22:07 AM (INFO): SMTP connection establsihed
+May-08 11:22:07 AM (INFO): SMTP connection secured
+May-08 11:22:08 AM (INFO): Mail sent
+May-08 11:22:08 AM (INFO): SMTP connection closed
+May-08 11:22:08 AM (INFO): ==== Program execution finished ====
