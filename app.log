@@ -4212,3 +4212,18 @@ May-28 11:21:04 AM (INFO): SMTP connection secured
 May-28 11:21:06 AM (INFO): Mail sent
 May-28 11:21:06 AM (INFO): SMTP connection closed
 May-28 11:21:06 AM (INFO): ==== Program execution finished ====
+May-29 11:20:57 AM (WARNING): No module named 'dotenv'
+May-29 11:20:57 AM (INFO): ==== Program starting ====
+May-29 11:20:57 AM (INFO): Fetching General news ..attempt 1
+May-29 11:20:58 AM (INFO): No new update found for General news notices
+May-29 11:20:58 AM (INFO): Fetching Trial exam ..attempt 1
+May-29 11:20:59 AM (INFO): New entry found for Trial exam notice! id: 1547
+May-29 11:20:59 AM (INFO): Trial exam updated id=1547
+May-29 11:20:59 AM (INFO): Initiating mail connection...
+May-29 11:20:59 AM (INFO): SMTP connection establsihed
+May-29 11:20:59 AM (INFO): SMTP connection secured
+May-29 11:21:00 AM (INFO): Mail sent
+May-29 11:21:00 AM (INFO): SMTP connection closed
+May-29 11:21:00 AM (INFO): Fetching Written exam ..attempt 1
+May-29 11:21:02 AM (INFO): No new update found for Written exam notices
+May-29 11:21:02 AM (INFO): ==== Program execution finished ====
