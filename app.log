@@ -4416,3 +4416,12 @@ Jun-13 11:22:03 AM (INFO): SMTP connection secured
 Jun-13 11:22:04 AM (INFO): Mail sent
 Jun-13 11:22:04 AM (INFO): SMTP connection closed
 Jun-13 11:22:04 AM (INFO): ==== Program execution finished ====
+Jun-14 11:21:05 AM (WARNING): No module named 'dotenv'
+Jun-14 11:21:05 AM (INFO): ==== Program starting ====
+Jun-14 11:21:05 AM (INFO): Fetching General news ..attempt 1
+Jun-14 11:21:07 AM (INFO): No new update found for General news notices
+Jun-14 11:21:07 AM (INFO): Fetching Trial exam ..attempt 1
+Jun-14 11:21:10 AM (INFO): No new update found for Trial exam notices
+Jun-14 11:21:10 AM (INFO): Fetching Written exam ..attempt 1
+Jun-14 11:21:12 AM (INFO): No new update found for Written exam notices
+Jun-14 11:21:12 AM (INFO): ==== Program execution finished ====
