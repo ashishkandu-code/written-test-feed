@@ -4458,3 +4458,12 @@ Jun-17 11:21:27 AM (INFO): No new update found for Trial exam notices
 Jun-17 11:21:27 AM (INFO): Fetching Written exam ..attempt 1
 Jun-17 11:21:31 AM (INFO): No new update found for Written exam notices
 Jun-17 11:21:31 AM (INFO): ==== Program execution finished ====
+Jun-18 11:21:47 AM (WARNING): No module named 'dotenv'
+Jun-18 11:21:47 AM (INFO): ==== Program starting ====
+Jun-18 11:21:47 AM (INFO): Fetching General news ..attempt 1
+Jun-18 11:21:47 AM (INFO): No new update found for General news notices
+Jun-18 11:21:47 AM (INFO): Fetching Trial exam ..attempt 1
+Jun-18 11:21:48 AM (INFO): No new update found for Trial exam notices
+Jun-18 11:21:48 AM (INFO): Fetching Written exam ..attempt 1
+Jun-18 11:21:50 AM (INFO): No new update found for Written exam notices
+Jun-18 11:21:50 AM (INFO): ==== Program execution finished ====
