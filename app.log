@@ -4503,3 +4503,13 @@ Jun-20 11:22:21 AM (INFO): SMTP connection secured
 Jun-20 11:22:22 AM (INFO): Mail sent
 Jun-20 11:22:22 AM (INFO): SMTP connection closed
 Jun-20 11:22:22 AM (INFO): ==== Program execution finished ====
+Jun-21 11:21:13 AM (WARNING): No module named 'dotenv'
+Jun-21 11:21:13 AM (INFO): ==== Program starting ====
+Jun-21 11:21:13 AM (INFO): Fetching General news ..attempt 1
+Jun-21 11:27:16 AM (ERROR): ("Connection broken: ConnectionResetError(104, 'Connection reset by peer')", ConnectionResetError(104, 'Connection reset by peer'))
+Jun-21 11:27:16 AM (INFO): Unable to get response from General news endpoint!
+Jun-21 11:27:16 AM (INFO): Fetching Trial exam ..attempt 1
+Jun-21 11:27:17 AM (INFO): No new update found for Trial exam notices
+Jun-21 11:27:17 AM (INFO): Fetching Written exam ..attempt 1
+Jun-21 11:27:17 AM (INFO): No new update found for Written exam notices
+Jun-21 11:27:17 AM (INFO): ==== Program execution finished ====
