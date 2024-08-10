@@ -5812,3 +5812,32 @@ Aug-09 11:43:55 AM (ERROR): HTTPConnectionPool(host='103.69.127.113', port=8080)
 Aug-09 11:43:55 AM (INFO): retrying in 10 seconds...
 Aug-09 11:44:05 AM (INFO): Unable to get response from Written exam endpoint!
 Aug-09 11:44:05 AM (INFO): ==== Program execution finished ====
+Aug-10 11:21:01 AM (WARNING): No module named 'dotenv'
+Aug-10 11:21:02 AM (INFO): ==== Program starting ====
+Aug-10 11:21:02 AM (INFO): Fetching General news ..attempt 1
+Aug-10 11:21:03 AM (ERROR): ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+Aug-10 11:21:03 AM (INFO): retrying in 10 seconds...
+Aug-10 11:21:13 AM (INFO): Fetching General news ..attempt 2
+Aug-10 11:51:09 AM (ERROR): HTTPConnectionPool(host='103.69.127.113', port=8080): Read timed out. (read timeout=None)
+Aug-10 11:51:09 AM (INFO): Unable to get response from General news endpoint!
+Aug-10 11:51:09 AM (INFO): Fetching Trial exam ..attempt 1
+Aug-10 11:51:12 AM (ERROR): ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+Aug-10 11:51:12 AM (INFO): retrying in 10 seconds...
+Aug-10 11:51:22 AM (INFO): Fetching Trial exam ..attempt 2
+Aug-10 11:51:25 AM (ERROR): ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+Aug-10 11:51:25 AM (INFO): retrying in 10 seconds...
+Aug-10 11:51:35 AM (INFO): Fetching Trial exam ..attempt 3
+Aug-10 11:51:40 AM (ERROR): ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+Aug-10 11:51:40 AM (INFO): retrying in 10 seconds...
+Aug-10 11:51:50 AM (INFO): Unable to get response from Trial exam endpoint!
+Aug-10 11:51:50 AM (INFO): Fetching Written exam ..attempt 1
+Aug-10 11:51:53 AM (ERROR): ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+Aug-10 11:51:53 AM (INFO): retrying in 10 seconds...
+Aug-10 11:52:03 AM (INFO): Fetching Written exam ..attempt 2
+Aug-10 11:52:07 AM (ERROR): ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+Aug-10 11:52:07 AM (INFO): retrying in 10 seconds...
+Aug-10 11:52:17 AM (INFO): Fetching Written exam ..attempt 3
+Aug-10 11:52:18 AM (ERROR): ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+Aug-10 11:52:18 AM (INFO): retrying in 10 seconds...
+Aug-10 11:52:28 AM (INFO): Unable to get response from Written exam endpoint!
+Aug-10 11:52:28 AM (INFO): ==== Program execution finished ====
