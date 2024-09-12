@@ -6882,3 +6882,36 @@ Sep-11 11:46:12 AM (ERROR): HTTPConnectionPool(host='103.69.127.113', port=8080)
 Sep-11 11:46:12 AM (INFO): retrying in 10 seconds...
 Sep-11 11:46:22 AM (INFO): Unable to get response from Written exam endpoint!
 Sep-11 11:46:22 AM (INFO): ==== Program execution finished ====
+Sep-12 11:24:12 AM (WARNING): No module named 'dotenv'
+Sep-12 11:24:12 AM (INFO): ==== Program starting ====
+Sep-12 11:24:12 AM (INFO): Fetching General news ..attempt 1
+Sep-12 11:26:27 AM (ERROR): HTTPConnectionPool(host='103.69.127.113', port=8080): Max retries exceeded with url: /notice-ws/api/v1/dotm/news-events?pageNo=0&pageSize=10 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fd7e94dd450>, 'Connection to 103.69.127.113 timed out. (connect timeout=None)'))
+Sep-12 11:26:27 AM (INFO): retrying in 10 seconds...
+Sep-12 11:26:37 AM (INFO): Fetching General news ..attempt 2
+Sep-12 11:28:50 AM (ERROR): HTTPConnectionPool(host='103.69.127.113', port=8080): Max retries exceeded with url: /notice-ws/api/v1/dotm/news-events?pageNo=0&pageSize=10 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fd7e94dd1e0>, 'Connection to 103.69.127.113 timed out. (connect timeout=None)'))
+Sep-12 11:28:50 AM (INFO): retrying in 10 seconds...
+Sep-12 11:29:00 AM (INFO): Fetching General news ..attempt 3
+Sep-12 11:31:13 AM (ERROR): HTTPConnectionPool(host='103.69.127.113', port=8080): Max retries exceeded with url: /notice-ws/api/v1/dotm/news-events?pageNo=0&pageSize=10 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fd7e94ddf60>, 'Connection to 103.69.127.113 timed out. (connect timeout=None)'))
+Sep-12 11:31:13 AM (INFO): retrying in 10 seconds...
+Sep-12 11:31:23 AM (INFO): Unable to get response from General news endpoint!
+Sep-12 11:31:23 AM (INFO): Fetching Trial exam ..attempt 1
+Sep-12 11:33:37 AM (ERROR): HTTPConnectionPool(host='103.69.127.113', port=8080): Max retries exceeded with url: /notice-ws/api/v1/dotm/forms?pageNo=0&pageSize=10 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fd7e94dead0>, 'Connection to 103.69.127.113 timed out. (connect timeout=None)'))
+Sep-12 11:33:37 AM (INFO): retrying in 10 seconds...
+Sep-12 11:33:47 AM (INFO): Fetching Trial exam ..attempt 2
+Sep-12 11:36:00 AM (ERROR): HTTPConnectionPool(host='103.69.127.113', port=8080): Max retries exceeded with url: /notice-ws/api/v1/dotm/forms?pageNo=0&pageSize=10 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fd7e94df370>, 'Connection to 103.69.127.113 timed out. (connect timeout=None)'))
+Sep-12 11:36:00 AM (INFO): retrying in 10 seconds...
+Sep-12 11:36:10 AM (INFO): Fetching Trial exam ..attempt 3
+Sep-12 11:38:23 AM (ERROR): HTTPConnectionPool(host='103.69.127.113', port=8080): Max retries exceeded with url: /notice-ws/api/v1/dotm/forms?pageNo=0&pageSize=10 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fd7e94de9b0>, 'Connection to 103.69.127.113 timed out. (connect timeout=None)'))
+Sep-12 11:38:23 AM (INFO): retrying in 10 seconds...
+Sep-12 11:38:33 AM (INFO): Unable to get response from Trial exam endpoint!
+Sep-12 11:38:33 AM (INFO): Fetching Written exam ..attempt 1
+Sep-12 11:40:47 AM (ERROR): HTTPConnectionPool(host='103.69.127.113', port=8080): Max retries exceeded with url: /notice-ws/api/v1/dotm/written-forms?pageNo=0&pageSize=10 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fd7e94de140>, 'Connection to 103.69.127.113 timed out. (connect timeout=None)'))
+Sep-12 11:40:47 AM (INFO): retrying in 10 seconds...
+Sep-12 11:40:57 AM (INFO): Fetching Written exam ..attempt 2
+Sep-12 11:43:10 AM (ERROR): HTTPConnectionPool(host='103.69.127.113', port=8080): Max retries exceeded with url: /notice-ws/api/v1/dotm/written-forms?pageNo=0&pageSize=10 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fd7e94dc490>, 'Connection to 103.69.127.113 timed out. (connect timeout=None)'))
+Sep-12 11:43:10 AM (INFO): retrying in 10 seconds...
+Sep-12 11:43:20 AM (INFO): Fetching Written exam ..attempt 3
+Sep-12 11:45:33 AM (ERROR): HTTPConnectionPool(host='103.69.127.113', port=8080): Max retries exceeded with url: /notice-ws/api/v1/dotm/written-forms?pageNo=0&pageSize=10 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fd7e94dcfa0>, 'Connection to 103.69.127.113 timed out. (connect timeout=None)'))
+Sep-12 11:45:33 AM (INFO): retrying in 10 seconds...
+Sep-12 11:45:43 AM (INFO): Unable to get response from Written exam endpoint!
+Sep-12 11:45:43 AM (INFO): ==== Program execution finished ====
