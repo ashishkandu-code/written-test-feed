@@ -11931,3 +11931,30 @@ Feb-11 11:45:02 AM (ERROR): HTTPConnectionPool(host='103.69.127.113', port=8080)
 Feb-11 11:45:02 AM (INFO): retrying in 10 seconds...
 Feb-11 11:45:12 AM (INFO): Unable to get response from Written exam endpoint!
 Feb-11 11:45:12 AM (INFO): ==== Program execution finished ====
+Feb-12 11:23:38 AM (WARNING): No module named 'dotenv'
+Feb-12 11:23:38 AM (INFO): ==== Program starting ====
+Feb-12 11:23:38 AM (INFO): Fetching General news ..attempt 1
+Feb-12 11:23:38 AM (INFO): New entry found for General news notice! id: 1807
+Feb-12 11:23:38 AM (INFO): General news updated id=1807
+Feb-12 11:23:38 AM (INFO): Initiating mail connection...
+Feb-12 11:23:38 AM (INFO): SMTP connection establsihed
+Feb-12 11:23:38 AM (INFO): SMTP connection secured
+Feb-12 11:23:40 AM (INFO): Mail sent
+Feb-12 11:23:40 AM (INFO): SMTP connection closed
+Feb-12 11:23:40 AM (INFO): Fetching Trial exam ..attempt 1
+Feb-12 11:23:41 AM (INFO): New entry found for Trial exam notice! id: 1814
+Feb-12 11:23:41 AM (INFO): Trial exam updated id=1814
+Feb-12 11:23:41 AM (INFO): Initiating mail connection...
+Feb-12 11:23:41 AM (INFO): SMTP connection establsihed
+Feb-12 11:23:41 AM (INFO): SMTP connection secured
+Feb-12 11:23:42 AM (INFO): Mail sent
+Feb-12 11:23:42 AM (INFO): SMTP connection closed
+Feb-12 11:23:42 AM (INFO): Fetching Written exam ..attempt 1
+Feb-12 11:23:43 AM (INFO): New entry found for Written exam notice! id: 1819
+Feb-12 11:23:43 AM (INFO): Written exam updated id=1819
+Feb-12 11:23:43 AM (INFO): Initiating mail connection...
+Feb-12 11:23:43 AM (INFO): SMTP connection establsihed
+Feb-12 11:23:43 AM (INFO): SMTP connection secured
+Feb-12 11:23:45 AM (INFO): Mail sent
+Feb-12 11:23:45 AM (INFO): SMTP connection closed
+Feb-12 11:23:45 AM (INFO): ==== Program execution finished ====
